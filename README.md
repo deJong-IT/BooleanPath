@@ -1,6 +1,9 @@
 # BooleanPath for macOS
 Add boolean operations to NSBezierPath like the pathfinder of Adobe Illustrator.
 
+## This fork
+Added Package.swift for usage with Swift Package Manager.
+
 ## About BooleanPath
 This is a rewrite of [VectorBoolean](https://github.com/lrtitze/Swift-VectorBoolean) written by Leslie Titze's.  
 BooleanPath is written by Swift for macOS.
