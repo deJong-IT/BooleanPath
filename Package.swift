@@ -21,7 +21,10 @@ let package = Package(
         .target(
             name: "BooleanPath",
             dependencies: [],
-			path: "./BooleanPath/"),
+			path: "./BooleanPath/",
+			exclude: [
+				"Info.plist"
+			]),
         .testTarget(
             name: "BooleanPathTests",
             dependencies: ["BooleanPath"]),
