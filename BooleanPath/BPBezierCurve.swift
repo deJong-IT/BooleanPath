@@ -625,7 +625,7 @@ class BPBezierCurveData {
     }
     
     func convertSelfAndPoint(_ point: CGPoint) -> [CGPoint] {
-        var selfPoints: [CGPoint] = [endPoint1, controlPoint1, controlPoint2, endPoint2]
+        let selfPoints: [CGPoint] = [endPoint1, controlPoint1, controlPoint2, endPoint2]
         
         let distanceFromPoint = [
             BPSubtractPoint(selfPoints[0], point2: point),
@@ -985,7 +985,7 @@ private func pfRefineParameter(_ me: BPBezierCurveData,
                                parameter: Double,
                                point: CGPoint) -> Double {
     
-    var bezierPoints: [CGPoint] = [me.endPoint1, me.controlPoint1, me.controlPoint2, me.endPoint2]
+    let bezierPoints: [CGPoint] = [me.endPoint1, me.controlPoint1, me.controlPoint2, me.endPoint2]
     
     let qAtParameter = BezierWithPoints(3, bezierPoints: bezierPoints, parameter: parameter, withCurves: false).point
     
