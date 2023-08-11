@@ -37,7 +37,7 @@ public extension CGPath {
         myPathApply(self) { element in
             let points = element.pointee.points
             switch (element.pointee.type) {
-            case CGPathElementType.moveToPoint:
+            case .moveToPoint:
                 fn(.move(to: points[0]))
             case .addLineToPoint:
                 fn(.line(to: points[0]))
@@ -47,7 +47,10 @@ public extension CGPath {
                 fn(.cubicCurve(to: points[2], v1: points[0], v2: points[1]))
             case .closeSubpath:
                 fn(.close)
-            }
+			@unknown default:
+				// currently unsupported
+				break
+			}
         }
     }
 }
